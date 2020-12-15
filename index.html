@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control Calidad Calzado</title>
+
+    <link rel="stylesheet" href="/css/styles.css">
+    <script type="text/javascript"></script>
+</head>
+<body>
+    <div class="login">
+       
+        <h1>Login</h1>
+            <form action="">
+                <label for="fname">User</label><br>
+                <input type="text" id="fname" name="user" value=""><br>
+                <label for="lname">Password</label><br>
+                <input type="text" id="lname" name="pass" value=""><br><br>
+                <button class="button button1" onclick=handleClick()>Login</button>
+                <input type="submit" value="Submit">            
+            </form>    
+    </div>
+    <br><br>
+    <div class="inspections">
+        <h2>Seleccionar Accion</h2>
+        <form action="inspectionInfo.html" >
+            <label for="fname">Nueva Inspeccion</label><br><br>
+            <input type="submit" value="Crear">
+            <br><br>
+            <label for="inspections">Selecciona una inspeccion anterior</label><br>
+            <select name="name" id="name">
+              <option value="01-01-2020">01-01-2020</option>           
+            </select><br><br>   
+            <input type="submit" value="seleccionar">
+            <br><br>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
