@@ -1,0 +1,16 @@
+html(lang='es')
+head 
+    title Control de Calidad Web App #{titulo}
+body
+    block content
+    h1 Datos de Inicio de Sesion   
+
+    form(name="User", method="post")
+        div.input
+            span.label Usuario
+            input(type="text", name="user")
+            br
+            span.label Password
+            input(type="text", name="password")
+        div.actions
+            input(type="submit", value="Login")
