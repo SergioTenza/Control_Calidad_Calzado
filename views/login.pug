@@ -1,16 +1,15 @@
-html(lang='es')
-head 
-    title Control de Calidad Web App #{titulo}
-body
-    block content
+extends layout
+
+block head
+    title #{titulo}
+block content
     h1 Datos de Inicio de Sesion   
 
-    form(name="User", method="post")
+    form(id="login" action="/signin" method="post")
         div.input
-            span.label Usuario
-            input(type="text", name="user")
+            input(type="text", name="user[email]", value="", placeholder="Tu email")
             br
-            span.label Password
-            input(type="text", name="password")
+            input(type="password", name="user[password]", value="", placeholder="Tu contraseña")
+            br
         div.actions
-            input(type="submit", value="Login")
+            input(type="submit", value="LOGIN")
