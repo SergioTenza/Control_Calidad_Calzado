@@ -1,0 +1,26 @@
+{
+  "name": "Control_Calidad_Calzado",
+  "version": "1.0.0",
+  "description": "Formulario para Realizar Inspeccion de Calidad con Norma ISO-28459-1",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.7",
+    "pug": "^3.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "run": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SergioTenza/Control_Calidad_Calzado.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SergioTenza/Control_Calidad_Calzado/issues"
+  },
+  "homepage": "https://github.com/SergioTenza/Control_Calidad_Calzado#readme"
+}
