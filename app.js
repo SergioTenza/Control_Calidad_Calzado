@@ -1,35 +1,14 @@
-var express = require('express');
-var fs = require('fs');
-var app = express();
-const pug = require('pug');
+const express = require('express');
+const path = require('path');
+const routes = require('./routes/index')
+const bodyParser = require('body-parser')
 
-app.use(express.static(__dirname + '/public'));
-app.use(express.urlencoded());
-app.use(express.json());
+const app = express();
 
-app.get('/', function(peticion, respuesta ){
-    respuesta.render('index.pug', {
-        titulo: "TEST",
-        textoParrafo: "XXX"
-    });
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'pug');
 
-});
+app.use(bodyParser.urlencoded({ extended: true}));
+app.use('/', routes);
 
-app.get('/login.html', function(peticion, respuesta ){
-    respuesta.render('login.pug', {
-        
-    });
-
-});
-
-app.post('/signin', function(peticion, respuesta){
-    respuesta.render('user.pug', {
-        
-        petition : peticion.body.user.email,
-        petition2 : peticion.body.user.password
-    });
-});
-
-app.listen(3000, function(){
-    console.log('escuchando en puerto 3000');
-});
+module.exports = app;

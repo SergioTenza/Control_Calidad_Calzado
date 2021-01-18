@@ -1,16 +1,19 @@
 {
-  "name": "Control_Calidad_Calzado",
+  "name": "ControlCalidadCalzado",
   "version": "1.0.0",
   "description": "Formulario para Realizar Inspeccion de Calidad con Norma ISO-28459-1",
   "main": "app.js",
   "dependencies": {
+    "body-parser": "^1.19.0",
     "express": "^4.17.1",
-    "nodemon": "^2.0.7",
+    "express-validator": "^6.9.2",
     "pug": "^3.0.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  },
   "scripts": {
-    "run": "nodemon app.js"
+    "watch": "nodemon ./start.js"
   },
   "repository": {
     "type": "git",
