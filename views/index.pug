@@ -1,29 +1,33 @@
 extends layout
 
-block head
-    title #{titulo}
-block header    
-    h1 Bienvenidos 
-            
-    p Control de Calidad con Express PUG #{textoParrafo}
 block content
-    
-        div 
-            p Aplicacion especializada en la Norma ISO 28459-1           
-            p adaptada especialmente al calzado.
-            
-        
-        h2  Elige tu opcion 
-            #seleccion        
-                a(href="/")
-                    button(type="button") Start Locally
-                    br 
-                a(href="/login.html")
-                    button(type="button") Start Online
-                    br
-                a(href="/")
-                    button(type="button") Search Locally 
-                    br
-                a(href="/")
-                    button(type="button") Search Cloud 
-                    br
+    -data = data || {}
+    if errors
+        ul(class="text-center font-italic")
+        for error in errors
+            li(class="text-center font-italic text-danger")= error.msg
+    form(action="." method="POST" class="form-registration")
+        label(for="email") Email:
+        input(
+            type="email"
+            id="email"
+            name="email"
+            class="form-control"
+            value=data.email
+        )
+
+        label(for="password") Password:
+        input(
+            type="password"
+            id="password"
+            name="password"
+            class="form-control"
+            value=data.password
+        )
+        a(href="/passrecovery") Has olvidado tu password?
+
+        input(
+            type="submit" 
+            value="Login"
+            class="btn btn-lg btn-primary btn-block"
+        )

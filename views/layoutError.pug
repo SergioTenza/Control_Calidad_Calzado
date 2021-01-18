@@ -1,0 +1,29 @@
+doctype html
+html
+  head
+    title= `${title}` 
+    link(rel='stylesheet', href='/css/bootstrap.min.css')
+    link(rel='stylesheet', href='/css/styles.css')
+    link(rel='stylesheet', href='/css/bootstrap-social.css')
+    script(src="https://kit.fontawesome.com/47652420e1.js" crossorigin="anonymous")
+
+  body
+    div.container.listing-reg
+      nav(class="navbar navbar-expand-lg navbar-dark bg-dark")
+        a(class="navbar-brand" href="/") Home     
+
+      block content
+      
+      p(id="bienvenida")
+        a(href="https://www.linkedin.com/in/sergio-tenza-lopez-b9766890/" class="btn btn-social-icon btn-linkedin m-4")
+          span(class="fa fa-linkedin")           
+        a(href="https://twitter.com/SergioTenza" class="btn btn-social-icon btn-twitter")
+          span(class="fa fa-twitter")
+
+      block footer        
+                                    
+        p(id="bienvenida") Creado por Sergio Tenza              
+          
+        
+          
+
