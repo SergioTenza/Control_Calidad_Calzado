@@ -1,2 +1,6 @@
-# Control_Calidad_Calzado
- Formulario para Realizar Inspeccion de Calidad con Norma ISO-28459-1
+# Control de Calidad de Calzado
+ CRUD Control de Calidad de Calzado 
+ NodeJS 
+ Express
+ PUG
+ MongoDb

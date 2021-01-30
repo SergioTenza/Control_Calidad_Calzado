@@ -1,0 +1,33 @@
+doctype html
+html(lang='es')
+head
+    include header.pug 
+body.hold-transition.login-page
+    .login-box
+        .login-logo
+            a(href='/') Control de Calidad de Calzado
+        .card
+        .card-body.login-card-body
+            p.login-box-msg Loguea para Iniciar sesion
+
+            .form(action="/signin" method="post")
+                .input-group.mb-3
+                    input(type="email" class="form-control" placeholder="Email")
+                    .input-group-append
+                        .input-group-text
+                            span.fas.fa-envelope            
+                .input-group.mb-3
+                    input(type="password" class="form-control" placeholder="Password")
+                    .input-group-append
+                        .input-group-text
+                            span.fas.fa-lock
+                .row
+                    .col-8
+                                 
+                    .col-4
+                        button(type="submit" class="btn btn-primary btn-block") Sign In            
+            p.mb-1
+                a(href="forgot-password.html") Has olvidado tu password?        
+            p.mb-0
+                a(href="registerApi.html" class="text-center") Registrate    
+include js.pug   

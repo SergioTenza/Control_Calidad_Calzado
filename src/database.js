@@ -1,10 +1,10 @@
-import mongoose from 'mongoose'
+import mongoose from 'mongoose';
 
-mongoose.connect("mongodb://localhost/ControlCalidadDB",{
+mongoose.connect("mongodb://localhost/cccalzado",{
     useNewUrlParser: true,
     useUnifiedTopology: true,
-    useCreateIndex: true,
-    useFindAndModify: true
+    useFindAndModify: true,
+    useCreateIndex: true
 })
     .then(db => console.log('DB is connected'))
     .catch(error => console.log(error))

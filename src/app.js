@@ -1,31 +1,28 @@
-import express from 'express'
-import morgan from 'morgan'
-import pkg from '../package.json'
+import express from 'express';
+import morgan from'morgan';
 
-import {createRoles} from './libs/initialSetup'
+import {createRoles} from './libs/initialSetup';
 
-import userRoutes from './routes/user.routes'
-import authRoutes from './routes/auth.routes'
+import tasksRoutes from './routes/tasks.routes';
+import authRoutes from './routes/auth.routes';
+import usersRoutes from './routes/user.routes'
 
 const app = express();
+
+app.set('view engine', 'pug');
+
 createRoles();
 
-app.set('pkg', pkg);
-
-app.use(express.json());
 app.use(morgan('dev'));
+app.use(express.json());
 
 app.get('/', (req, res) =>{
-    res.json({
-        name: app.get('pkg').name,
-        author: app.get('pkg').author,
-        description: app.get('pkg').description,
-        version: app.get('pkg').version
-    })
+    res.render('loginApi', { title: 'Hey', message: 'Hello there!'});
 })
 
-app.use('/api/user', userRoutes);
+app.use(express.static('public'));
+app.use('/api/tasks', tasksRoutes);
 app.use('/api/auth', authRoutes);
-
+app.use('/api/users', usersRoutes);
 
 export default app;
