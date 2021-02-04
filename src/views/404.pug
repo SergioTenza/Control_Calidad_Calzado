@@ -1,0 +1,17 @@
+doctype html
+html(lang='es')
+head
+    include layout/header.pug 
+body.hold-transition.error-page
+    section.content
+        .error-page
+            h2.headline.text-warning 404
+
+            .error-content                
+                h3
+                    <i class="fas fa-exclamation-triangle text-warning"></i>Oops! Pagina no encontrada.
+                    
+                p No hemos podido encontrar la pagina que buscabas. Mientras, puedes regresar <a href="/dashboard">regresar al panel de control </a>o<a href="/"> regresar al Inicio</a>. 
+                p #{status}
+                p #{message}          
+include layout/js.pug

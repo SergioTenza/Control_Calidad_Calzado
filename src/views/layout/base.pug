@@ -1,0 +1,14 @@
+doctype html
+html(lang='es')
+head
+    include header.pug 
+body.hold-transition.sidebar-mini.layout-navbar-fixed
+.wrapper  
+    include navigation.pug
+    include sidebar.pug 
+    .content-wraper
+        include contentHeader.pug
+        block content
+    footer.main-footer
+        include footer.pug            
+include js.pug   
