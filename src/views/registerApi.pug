@@ -1,0 +1,41 @@
+doctype html
+html(lang='es')
+head
+    include layout/header.pug 
+body.hold-transition.register-page
+    .register-box
+        .register-logo
+            a(href='/login') Control de Calidad de Calzado
+        .card
+            .card-body.register-card-body
+                p.login-box-msg Registro de nuevo miembro
+
+                form(action="/api/auth/signup" method="post")
+                    .input-group.mb-3
+                        input(type="text" class="form-control" placeholder="Nombre Completo" name="username")
+                        .input-group-append
+                            .input-group-text
+                                span.fas.fa-user
+                    .input-group.mb-3
+                        input(type="email" class="form-control" placeholder="Email" name="email")
+                        .input-group-append
+                            .input-group-text
+                                span.fas.fa-envelope            
+                    .input-group.mb-3
+                        input(type="password" class="form-control" placeholder="Password" name="password")
+                        .input-group-append
+                            .input-group-text
+                                span.fas.fa-lock
+                    .input-group.mb-3
+                        input(type="password" class="form-control" placeholder="Repite Password")
+                        .input-group-append
+                            .input-group-text
+                                span.fas.fa-lock
+                    .row
+                        .col-8
+                                    
+                        .col-4
+                            button(type="submit" class="btn btn-primary btn-block") Registrate           
+                p.mb-1
+                    a.text-center(href="/login") Ya estoy registrado        
+                
