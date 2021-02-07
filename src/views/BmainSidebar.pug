@@ -1,9 +1,9 @@
 //Main Sidebar Container 
 aside(class="main-sidebar sidebar-dark-primary elevation-4")
     //Brand Logo 
-    a(href="/api/panel/" class="brand-link")
+    a(href="/panel" class="brand-link")
         img(src="/img/logo.png" alt="" class="brand-image img-circle elevation-3" style="opacity: .8")
-        span(class="brand-text font-weight-light") API DEDICATIONS
+        span(class="brand-text font-weight-light") CC Calzado
     //Sidebar 
     div(class="sidebar")
         //Sidebar user (optional) 
@@ -22,26 +22,9 @@ aside(class="main-sidebar sidebar-dark-primary elevation-4")
                             i(class="fas fa-angle-left right")
                     ul(class="nav nav-treeview")
                         li(class="nav-item")
-                            a(href="" class="nav-link")                        
+                            a(href="/panel/userinfo" class="nav-link")                        
                                 i(class="nav-icon fas fa-user")
-                                p Información
-                        li(class="nav-item")
-                            a(href="" class="nav-link")                        
-                                i(class="nav-icon fas fa-users")
-                                p Listar usuarios
-                        li(class="nav-item")
-                            a(href="" class="nav-link")                        
-                                i(class="nav-icon fas fa-user-plus")
-                                p Añadir usuario
-                        li(class="nav-item")
-                            a(href="" class="nav-link")                        
-                                i(class="nav-icon fas fa-user-edit")
-                                p Modificar usuario
-                        li(class="nav-item")
-                            a(href="" class="nav-link")                        
-                                i(class="nav-icon fas fa-user-times")
-                                p Eliminar usuario
-                        p 
+                                p Información                                   
                         li(class="nav-item text-warning")
                             a(href="/logout" class="nav-link")                        
                                 i(class="nav-icon fas fa-sign-out-alt")
@@ -49,67 +32,15 @@ aside(class="main-sidebar sidebar-dark-primary elevation-4")
                 
                 li(class="nav-item")
                     a(href="" class="nav-link")                        
-                        i(class="nav-icon far fa-star")
-                        p GESTION EVENTOS
+                        i(class="nav-icon far fa-file-alt")
+                        p GESTION INSPECCIONES
                             i(class="fas fa-angle-left right")
                     ul(class="nav nav-treeview")                
                         li(class="nav-item")
-                            a(href="" class="nav-link")                        
+                            a(href="/panel/listinsp" class="nav-link")                        
                                 i(class="nav-icon far fa-calendar-alt")
-                                p Listar eventos
+                                p Listar Inspecciones
                         li(class="nav-item")
                             a(href="" class="nav-link")                        
                                 i(class="nav-icon far fa-calendar-plus")
-                                p Añadir evento               
-                        li(class="nav-item")
-                            a(href="" class="nav-link")                        
-                                i(class="nav-icon far fa-calendar")
-                                p Modificar eventos              
-                        li(class="nav-item")
-                            a(href="" class="nav-link")                        
-                                i(class="nav-icon far fa-calendar-minus")
-                                p Borrar eventos                  
-                li(class="nav-item")
-                    a(href="" class="nav-link")                        
-                        i(class="nav-icon fas fa-camera-retro")
-                        p GESTION MAQUINAS
-                            i(class="fas fa-angle-left right")
-                    ul(class="nav nav-treeview")
-                        li(class="nav-item")
-                            a(href="" class="nav-link")                        
-                                i(class="nav-icon fas fa-desktop")
-                                p Listar maquinas
-                        li(class="nav-item")
-                            a(href="" class="nav-link")                        
-                                i(class="nav-icon far fa-plus-square")
-                                p Nueva maquina                
-                        li(class="nav-item")
-                            a(href="" class="nav-link")                        
-                                i(class="nav-icon far fa-edit")
-                                p Modificar maquina 
-                        li(class="nav-item")
-                            a(href="" class="nav-link")                        
-                                i(class="nav-icon far fa-minus-square")
-                                p Borrar maquina
-                li(class="nav-item")
-                    a(href="" class="nav-link")                        
-                        i(class="nav-icon fas fa-euro-sign")
-                        p GESTION FACTURACION
-                            i(class="fas fa-angle-left right")
-                    ul(class="nav nav-treeview")                                        
-                        li(class="nav-item")
-                            a(href="" class="nav-link")                        
-                                i(class="fas fa-file-invoice-dollar")
-                                p Generar facturas   
-                li(class="nav-item")
-                    a(href="" class="nav-link")                        
-                        i(class="nav-icon far fa-calendar-alt")
-                        p AGENDA
-                            i(class="fas fa-angle-left right")
-                    ul(class="nav nav-treeview")                                        
-                        li(class="nav-item")
-                            a(href="/api/panel/calendar" class="nav-link")                        
-                                i(class="far fa-calendar-alt")
-                                p Calendario                                                                                            
-        //Sidebar Menu       
-    //sidebar
+                                p Añadir Inspeccion

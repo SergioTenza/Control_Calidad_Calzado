@@ -5,5 +5,7 @@ import { isAuthenticated } from '../helpers/auth';
 const router = Router();
 
 router.get('/', isAuthenticated, panelCtrl.panelHome);
+router.get('/userinfo', isAuthenticated, panelCtrl.panelUserInfo);
+router.get('/listinsp', isAuthenticated, panelCtrl.panelListInsp);
 
 export default router;

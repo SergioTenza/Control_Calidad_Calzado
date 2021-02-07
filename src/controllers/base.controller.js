@@ -47,7 +47,7 @@ export const signinform = (req, res) => {
 
 export const signin = passport.authenticate('local', {
         failureRedirect: '/login',
-        successRedirect: '/api/panel',
+        successRedirect: '/panel',
         failureFlash: true        
 });
 
