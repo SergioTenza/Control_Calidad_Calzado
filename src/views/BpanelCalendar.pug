@@ -1,7 +1,8 @@
 doctype html
 html(lang='es')
     head
-        include Bheader.pug 
+        include Bheader.pug
+        include BheaderCalendar.pug 
     body
         include BcontainerMain.pug
             include Bnavbar.pug
@@ -9,4 +10,5 @@ html(lang='es')
             block mainContainer                      
     footer
         include Bfooter.pug                                 
-    include Bjs.pug   
+    include Bjs.pug
+    include BjsCalendar   

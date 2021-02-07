@@ -1,0 +1,125 @@
+extends BpanelCalendar.pug   
+
+block mainContainer
+    //Content Wrapper. Contains page content 
+    div(class="content-wrapper")
+        //Content Header (Page header) 
+        section(class="content-header")
+            div(class="container-fluid")
+                div(class="row mb-2")
+                    div(class="col-sm-6")
+                        h1 #{cabecera}
+                    div(class="col-sm-6")
+                        ol(class="breadcrumb float-sm-right")
+                            li(class="breadcrumb-item") <a href="/panel">Home</a>
+                            li(class="breadcrumb-item active") #{cabecera}
+            //.container-fluid 
+        
+        // Main content 
+        section(class="content")
+            div(class="container-fluid")                
+                div(class="row")
+                    div(class="col-md-3")
+                        div(class="sticky-top mb-3")
+                            div(class="card")
+                                div(class="card-header")
+                                    h4(class="card-title") Eventos Arrastrables
+                                
+                                div(class="card-body")
+                                    //the events
+                                    div(id="external-events")
+                                        div(class="external-event bg-success") Boda
+                                        div(class="external-event bg-warning") Bautizo
+                                        div(class="external-event bg-info") Comunion
+                                        div(class="external-event bg-primary") Empresa
+                                        div(class="external-event bg-danger") Deceso
+                                        div(class="checkbox")
+                                            label(for="drop-remove") Eliminar tras arrastrar   
+                                                input(type="checkbox" id="drop-remove") 
+                                        
+                                //.card-body 
+                            //.card 
+                            div(class="card")
+                                div(class="card-header")
+                                    h3(class="card-title") Crear Evento
+                                div(class="card-body")
+                                    div(class="btn-group" style="width: 100%; margin-bottom: 10px;")
+                                        ul(class="fc-color-picker" id="color-chooser")
+                                            li <a class="text-primary" href="#"> <i class="fas fa-square"> </i> </a>
+                                            li <a class="text-warning" href="#"> <i class="fas fa-square"> </i> </a>
+                                            li <a class="text-success" href="#"> <i class="fas fa-square"> </i> </a>
+                                            li <a class="text-danger" href="#"> <i class="fas fa-square"> </i> </a>
+                                            li <a class="text-muted" href="#"> <i class="fas fa-square"> </i> </a>
+                                      
+                                    //btn-group
+                                    div(class="input-group")                                        
+                                        input(id="new-event" type="text" class="form-control" placeholder="Tipo de evento")
+
+                                        div(class="input-group-append")
+                                        button(id="add-new-event" type="button" class="btn btn-primary") Add
+                                    //form-group
+                                    div(class="form-group")
+                                        label Tema
+                                        select(class="form-control select2" style="width: 100%;")
+                                            option(selected="selected") Tema 1
+                                            option Tema 2
+                                            option Tema 3
+                                            option Tema 4
+                                            option Tema 5
+                                            option Tema 6
+                                            option Tema 7 
+                                        label Skin
+                                        select(class="form-control select2" style="width: 100%;")
+                                            option(selected="selected") Skin 1
+                                            option Skin 2
+                                            option Skin 3
+                                            option Skin 4
+                                            option Skin 5
+                                            option Skin 6
+                                            option Skin 7  
+                                        label Texto evento
+                                        input(type="text" class="form-control" placeholder="")
+                                        label(for="exampleInputFile") Subir Logo
+                                        div(class="input-group mb-3")
+                                            div(class="custom-file")
+                                                input(type="file" class="custom-file-input" id="customFile")
+                                                label(class="custom-file-label" for="customFile") Elegir Logo
+                                        div(class="input-group mb-3")
+                                            div(class="input-group-prepend")
+                                                button(type="button" class="btn btn-primary") Añadir URL                                            
+                                            input(type="text" class="form-control")
+                                        ol 
+                                            li 
+                                                label https://www.google.es                                     
+                                        div(class="input-group mb-3")
+                                            div(class="input-group-prepend")
+                                                button(type="button" class="btn btn-primary") Añadir Mesa                                            
+                                            input(type="text" class="form-control")
+                                        ol 
+                                            label Mesas
+                                            li 
+                                                label Mesa Ejemplo 1                                                 
+                                                div(class="input-group mb-3")
+                                                    div(class="input-group-prepend")
+                                                        button(type="button" class="btn btn-primary") Añadir Asistente                             
+                                                    input(type="text" class="form-control")
+                                                ul 
+                                                    label Asistentes
+                                                    li Paco
+                                                    li Pepe
+                                                    li Juan
+                                                    li Mari
+                                                    li Susi
+                                                    li Lore 
+
+
+                                                                            
+                    //.col
+                    div(class="col-md-9")
+                        div(class="card card-primary")
+                            div(class="card-body p-0")
+                                // THE CALENDAR
+                                div(id="calendar")                            
+        //<!-- /.content 
+
+    //<!-- /.content-wrapper  

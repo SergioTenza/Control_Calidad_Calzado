@@ -1,0 +1,26 @@
+doctype html
+html(lang='es')
+head
+    include layout/header.pug 
+body.hold-transition.login-page
+    .login-box
+        .login-logo
+            a(href='/login') Dedications Api
+        .card
+            .card-body.login-card-body
+                p.login-box-msg Has olvidado tu password? aqui puedes restablecerlo facilmente.
+
+                form(action="" method="post")
+                    .input-group.mb-3
+                        input(type="email" class="form-control" placeholder="escribe aqui tu Email" name="email")
+                        .input-group-append
+                            .input-group-text
+                                span.fas.fa-envelope                        
+                    .row
+                        .col-12
+                            button(type="submit" class="btn btn-primary btn-block") Pide un nuevo password
+                p.mt-3.mb-1
+                    a(href="/login") Login                
+                p.mb-0
+                    a(href="/register" class="text-center") Registrate si no lo estas.
+include layout/js.pug   

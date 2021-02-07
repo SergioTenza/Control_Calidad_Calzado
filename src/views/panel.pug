@@ -16,19 +16,21 @@ block mainContainer
         
         //<!-- Main content 
         section(class="content")
-            //<!-- Default box 
-            h5(class="mb-2") <b>Gracias por usar nuestra app</b>, si quieres colaborar pulsa <a href="#"> aqui.</a>
+            //<!-- Default box
+            include layout/messagesError.pug
+            include layout/messagesSuccesful.pug 
+            h5(class="mb-2") <b>Bienvenido a DEDICATIONS API By FunPhotos Systems S.L.
             div(class="card card-success")
                 div(class="card-body")
                     div(class="row")
                         div(class="col-md-12 col-lg-6 col-xl-4")
                             div(class="card mb-2 bg-gradient-dark")
-                            img(class="card-img-top" src="/dist/img/photo6.jpg" alt="Dist Photo 1")
+                            img(class="card-img-top" src="/img/promo4.jpg" alt="Dist Photo 1")
                             div(class="card-img-overlay d-flex flex-column justify-content-start")
-                                h5(class="card-title text-primary text-light") <strong>Control de Calidad ISO 2859-1</strong>
-                                p(class="card-text text-white pb-2 pt-1") Bienvenido, que quieres hacer hoy?.                                
-                            div(class="card-img-overlay d-flex flex-column justify-content-end")
-                                a(href="https://www.freepik.com/photos/business") Business photo created by aleksandarlittlewolf - www.freepik.com
+                                //h5(class="card-title text-primary text-light") <strong>Control de Calidad ISO 2859-1</strong>
+                                //p(class="card-text text-white pb-2 pt-1") Bienvenido, que quieres hacer hoy?.                                
+                            //div(class="card-img-overlay d-flex flex-column justify-content-end")
+                            //    a(href="https://www.freepik.com/photos/business") Business photo created by aleksandarlittlewolf - www.freepik.com
                     //<!-- /.card-footer            
             //<!-- /.card 
         //<!-- /.content 

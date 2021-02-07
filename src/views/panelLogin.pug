@@ -1,0 +1,38 @@
+doctype html
+html(lang='es')
+head
+    title Login
+    include layout/header.pug     
+body.hold-transition.login-page
+    include layout/messageError.pug
+    include layout/messagesError.pug    
+    include layout/messagesSuccesful.pug
+    include layout/errors.pug
+    .login-box
+        .login-logo
+            a(href='/login') Dedications Api
+        .card
+        .card-body.login-card-body            
+            p.login-box-msg Inicia sesion
+
+            form(action="/login" method="post")
+                .input-group.mb-3
+                    input(type="email" class="form-control" placeholder="Email" name="email")
+                    .input-group-append
+                        .input-group-text
+                            span.fas.fa-envelope            
+                .input-group.mb-3
+                    input(type="password" class="form-control" placeholder="Password" name="password")
+                    .input-group-append
+                        .input-group-text
+                            span.fas.fa-lock                
+                .row
+                    .col-8
+                                 
+                    .col-4
+                        button(type= "submit" class= "btn btn-primary btn-block") Sign In                
+            p.mb-1
+                a(href="/forgot") Has olvidado tu password?        
+            p.mb-0
+                a(href="/contact" class="text-center") Contactanos para ser usuario    
+include layout/js.pug   

@@ -1,5 +1,5 @@
 import app from './app'
 import './database'
 
-app.listen(5001);
-console.log('server ccc listen on port', 5001);
+app.listen(app.get('port'));
+console.log('server listen on port', app.get('port'));

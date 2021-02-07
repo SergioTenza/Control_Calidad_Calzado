@@ -1,33 +1,36 @@
 doctype html
 html(lang='es')
 head
-    include ./layout/header.pug 
-body.hold-transition.register-page
+    include layout/header.pug 
+body.hold-transition.register-page  
+    include layout/messagesError.pug
+    include layout/messagesSuccesful.pug
+    include layout/errors.pug
     .register-box
         .register-logo
-            a(href='#') Dedications API
+            a(href='/login') Dedications Api            
         .card
             .card-body.register-card-body
                 p.login-box-msg Registro de nuevo miembro
 
-                .form(action="#" method="post")
+                form(action="/register" method="post")
                     .input-group.mb-3
-                        input(type="text" class="form-control" placeholder="Nombre Completo")
+                        input(type="text" class="form-control" placeholder="Nombre Completo" name="username")
                         .input-group-append
                             .input-group-text
                                 span.fas.fa-user
                     .input-group.mb-3
-                        input(type="email" class="form-control" placeholder="Email")
+                        input(type="email" class="form-control" placeholder="Email" name="email")
                         .input-group-append
                             .input-group-text
                                 span.fas.fa-envelope            
                     .input-group.mb-3
-                        input(type="password" class="form-control" placeholder="Password")
+                        input(type="password" class="form-control" placeholder="Password" name="password")
                         .input-group-append
                             .input-group-text
                                 span.fas.fa-lock
                     .input-group.mb-3
-                        input(type="password" class="form-control" placeholder="Repite Password")
+                        input(type="password" class="form-control" placeholder="Repite Password" name="confirm_password")
                         .input-group-append
                             .input-group-text
                                 span.fas.fa-lock
@@ -37,5 +40,5 @@ body.hold-transition.register-page
                         .col-4
                             button(type="submit" class="btn btn-primary btn-block") Registrate           
                 p.mb-1
-                    a.text-center(href="#") Ya estoy registrado        
-                
+                    a.text-center(href="/login") Ya estoy registrado        
+include layout/js.pug   

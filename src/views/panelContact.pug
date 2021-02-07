@@ -1,0 +1,33 @@
+doctype html
+html(lang='es')
+head
+    include layout/header.pug 
+body.hold-transition.login-page    
+        h2.mb-4 FUNPHOTOS DEDICATIONS Api        
+        .card
+            .card-body.row 
+                .col-5.text-center.d-flex-align-items-center.justify-content-center 
+                    div(class="")
+                        img.mb-2(class="rounded-circle z-depth-2" alt="100x100" src="../img/logo.png" width="150" data-holder-rendered="true")
+                        p.lead.mb-5 Si quiere ser<br><strong>USUARIO</strong> <br> Escribe ALTA en <strong>CONSULTA</strong><br><br> Nos pondremos en contacto con usted lo antes posible.
+                        br
+                        br
+                        br
+                        a(href="https://www.google.es/maps/place/FunPhotos/@38.2936989,-0.6184098,17z/data=!3m1!4b1!4m5!3m4!1s0xd63b53f565533a3:0xd93a9cc9c12ab4e6!8m2!3d38.2936947!4d-0.6162211") 
+                            p.lead.mb-5 Parque Empresarial de Elche<br> C/ Felix Rodríguez de la Fuente, 26A<br> 03203<br> Alicante (Alacant)<br>Tfno. +34 638 79 30 88
+                .col-7
+                    .form-group 
+                        label(for="inputName") Nombre
+                        input.form-control(type="text" id="inputName")
+                    .form-group 
+                        label(for="inputEmail") E-mail
+                        input.form-control(type="email" id="inputEmail")
+                    .form-group 
+                        label(for="inputSubject") Consulta
+                        input.form-control(type="text" id="inputSubject")
+                    .form-group 
+                        label(for="inputMessage") Mensaje
+                        textarea.form-control(type="text" id="inputMessage" rows="4")
+                    .form-group 
+                        input(type="submit" class="btn btn-primary" value="Envia tu mensaje")
+include layout/js.pug   
