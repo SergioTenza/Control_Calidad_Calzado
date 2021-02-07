@@ -21,4 +21,12 @@ export const panelListInsp = (req, res) => {
     });
 }
 
+export const panelNewInsp = (req, res) => {    
+    res.render('panelInspNew', {
+        title: 'Inspecciones',
+        cabecera: 'Nueva Inspeccion',
+        username: req.user.username        
+    });
+}
+
 

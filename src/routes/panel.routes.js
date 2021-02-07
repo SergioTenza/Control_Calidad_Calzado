@@ -7,5 +7,6 @@ const router = Router();
 router.get('/', isAuthenticated, panelCtrl.panelHome);
 router.get('/userinfo', isAuthenticated, panelCtrl.panelUserInfo);
 router.get('/listinsp', isAuthenticated, panelCtrl.panelListInsp);
+router.get('/newinsp', isAuthenticated, panelCtrl.panelNewInsp);
 
 export default router;
