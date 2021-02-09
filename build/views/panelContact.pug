@@ -1,0 +1,28 @@
+doctype html
+html(lang='es')
+head
+    include layout/header.pug 
+body.hold-transition 
+    container              
+        .card
+            .card-header 
+                h2.mb-4.text-center Control de Calidad
+            .card-body.row  
+                .col-3                                   
+                .col-6
+                    .form-group 
+                        label(for="inputName") Nombre
+                        input.form-control(type="text" id="inputName")
+                    .form-group 
+                        label(for="inputEmail") E-mail
+                        input.form-control(type="email" id="inputEmail")
+                    .form-group 
+                        label(for="inputSubject") Consulta
+                        input.form-control(type="text" id="inputSubject")
+                    .form-group 
+                        label(for="inputMessage") Mensaje
+                        textarea.form-control(type="text" id="inputMessage" rows="4")
+                    .form-group 
+                        input(type="submit" class="btn btn-primary" value="Envia tu mensaje")
+                .col-3
+include layout/js.pug   

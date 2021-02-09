@@ -1,0 +1,46 @@
+//Main Sidebar Container 
+aside(class="main-sidebar sidebar-dark-primary elevation-4")
+    //Brand Logo 
+    a(href="/panel" class="brand-link")
+        img(src="/img/logo.png" alt="" class="brand-image img-circle elevation-3" style="opacity: .8")
+        span(class="brand-text font-weight-light") CC Calzado
+    //Sidebar 
+    div(class="sidebar")
+        //Sidebar user (optional) 
+        div(class="user-panel mt-3 pb-3 mb-3 d-flex")
+            div(class="image")
+                img(src="/img/userDefault-160x160.jpg" class="img-circle elevation-2" alt="")
+            div(class="info")                
+                a(href="#" class="d-block") Bienvenido #{username}    
+        //Sidebar Menu
+        nav(class="mt-2")
+            ul(class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false")                
+                li(class="nav-item")
+                    a(href="" class="nav-link")                        
+                        i(class="nav-icon fas fa-user-cog")
+                        p GESTION USUARIO
+                            i(class="fas fa-angle-left right")
+                    ul(class="nav nav-treeview")
+                        li(class="nav-item")
+                            a(href="/panel/userinfo" class="nav-link")                        
+                                i(class="nav-icon fas fa-user")
+                                p Información                                   
+                        li(class="nav-item text-warning")
+                            a(href="/logout" class="nav-link")                        
+                                i(class="nav-icon fas fa-sign-out-alt")
+                                p Cerrar sesión            
+                
+                li(class="nav-item")
+                    a(href="" class="nav-link")                        
+                        i(class="nav-icon far fa-file-alt")
+                        p GESTION INSPECCIONES
+                            i(class="fas fa-angle-left right")
+                    ul(class="nav nav-treeview")                
+                        li(class="nav-item")
+                            a(href="/panel/listinsp" class="nav-link")                        
+                                i(class="nav-icon far fa-calendar-alt")
+                                p Listar Inspecciones
+                        li(class="nav-item")
+                            a(href="/panel/newinsp" class="nav-link")                        
+                                i(class="nav-icon far fa-calendar-plus")
+                                p Nueva Inspeccion

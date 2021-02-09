@@ -1,0 +1,20 @@
+doctype html
+html(lang='es')
+head
+    title 404
+    include layout/header.pug 
+body.hold-transition.error-page
+    section.content
+        .error-page
+            h2.headline.text-warning 404
+
+            .error-content                
+                h3
+                    <i class="fas fa-exclamation-triangle text-warning"></i>Oops! Pagina no encontrada.
+                    
+                p No hemos podido encontrar la pagina que buscabas. Mientras, puedes regresar <a href="/api/panel">regresar al panel de control </a>o<a href="/login"> regresar al Inicio</a>. 
+                unless success_msg
+                    div(class="alert alert-warning alert-dismissible fade show" role="alert")
+                        strong=success_msg
+                        button(type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close")
+include layout/js.pug

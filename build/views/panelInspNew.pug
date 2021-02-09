@@ -1,0 +1,359 @@
+extends Bpanel.pug   
+
+block mainContainer
+    //<!-- Content Wrapper. Contains page content 
+    div(class="content-wrapper")
+        //<!-- Content Header (Page header) 
+        section(class="content-header")
+            div(class="container-fluid")
+                div(class="row mb-2")
+                    div(class="col-sm-6")
+                        h1 #{cabecera}
+                    div(class="col-sm-6")
+                        ol(class="breadcrumb float-sm-right")
+                            li(class="breadcrumb-item") <a href="/ccc/panel">Home</a>
+                            li(class="breadcrumb-item active") #{cabecera}
+            //<!-- /.container-fluid 
+        
+        //<!-- Main content 
+        section(class="content")
+            //<!-- Default box 
+            h5(class="mt-4 mb-2") Comienza tu inspeccion
+            div(class="row")
+                div(class="col-12")
+                    //Custom Tabs
+                    div(class="card")
+                        div(class="card-header d-flex p-0")
+                            h3(class="card-title p-3") Opciones
+                            ul(class="nav nav-pills ml-auto p-2")
+                                li(class="nav-item") <a class="nav-link active" href="#tab_1" data-toggle="tab">Datos Inspección</a>                                                                                       
+                                li(class="nav-item") <a class="nav-link" href="#tab_2" data-toggle="tab">Datos Pedido</a>
+                                li(class="nav-item") <a class="nav-link" href="#tab_3" data-toggle="tab">Realizar inspección</a>
+                                li(class="nav-item") <a class="nav-link" href="#tab_4" data-toggle="tab">Finalizar inspección</a>                                
+                        //.card-header
+                        div(class="card-body")
+                            div(class="tab-content")
+                                div(class="tab-pane active" id="tab_1") Datos Inspección
+                                    div(class="row")
+                                        // left column 
+                                        div(class="col-md-4")
+                                            // general form elements
+                                            div(class="card card-primary")
+                                                div(class="card-header")
+                                                    h3(class="card-title") Inspeccion
+                                                //.card-header 
+                                                // form start 
+                                                form
+                                                    div(class="card-body")
+                                                        div(class="form-group")
+                                                            label Nombrar Inspeccion
+                                                            input(type="text" class="form-control" placeholder="Ingresar..." enabled)                                                         
+                                                        div(class="form-group")
+                                                            label Nombre Inspector
+                                                            input(type="text" class="form-control" placeholder="Ingresar..." enabled)                                                         
+                                                        div(class="form-group")
+                                                            label Tfno:
+                                                            div(class="input-group")
+                                                                div(class="input-group-prepend")
+                                                                    span(class="input-group-text") <i class="fas fa-phone"></i>                                                            
+                                                                input(type="text" class="form-control" data-inputmask="'mask': ['999-999-9999 [x99999]', '+099 99 99 9999[9]-9999']" data-mask)
+                                                        div(class="form-group")
+                                                            label(for="exampleInputEmail1") Email
+                                                            input(type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email")                                                        
+                                                    //.card-body
+                                                    div(class="card-footer")
+                                                        button(type="submit" class="btn btn-primary") Enviar
+                                                //.card 
+                                        // center column
+                                        div(class="col-md-4")
+                                            // general form elements
+                                            div(class="card card-primary")
+                                                div(class="card-header")
+                                                    h3(class="card-title") Cliente
+                                                //.card-header 
+                                                // form start 
+                                                form
+                                                    div(class="card-body")
+                                                        div(class="form-group")
+                                                            label Nombre Cliente
+                                                            input(type="text" class="form-control" placeholder="Ingresar..." enabled) 
+                                                        div(class="form-group")
+                                                            label Direccion
+                                                            input(type="text" class="form-control" placeholder="Ingresar..." enabled)                                               
+                                                        div(class="form-group")
+                                                            label Contacto
+                                                            input(type="text" class="form-control" placeholder="Ingresar..." enabled)
+                                                        div(class="form-group")
+                                                            label Tfno:
+                                                            div(class="input-group")
+                                                                div(class="input-group-prepend")
+                                                                    span(class="input-group-text") <i class="fas fa-phone"></i>                                                            
+                                                                input(type="text" class="form-control" data-inputmask="'mask': ['999-999-9999 [x99999]', '+099 99 99 9999[9]-9999']" data-mask)
+                                                        div(class="form-group")
+                                                            label(for="exampleInputEmail1") Email
+                                                            input(type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email")                                                        
+                                                    //.card-body
+                                                    div(class="card-footer")
+                                                        button(type="submit" class="btn btn-primary") Enviar
+                                                //.card
+                                        // right column
+                                        div(class="col-md-4")
+                                            // general form elements
+                                            div(class="card card-primary")
+                                                div(class="card-header")
+                                                    h3(class="card-title") Proveedor
+                                                //.card-header 
+                                                // form start 
+                                                form
+                                                    div(class="card-body")
+                                                        div(class="form-group")
+                                                            label Fecha y Hora:
+                                                            div(class="input-group")
+                                                                div(class="input-group-prepend")
+                                                                    span(class="input-group-text") <i class="far fa-clock"></i>
+                                                                
+                                                                input(type="text" class="form-control float-right" id="reservationtime")
+                                                        div(class="form-group")
+                                                            label Nombre Proveedor
+                                                            input(type="text" class="form-control" placeholder="Ingresar..." enabled) 
+                                                        div(class="form-group")
+                                                            label Direccion
+                                                            input(type="text" class="form-control" placeholder="Ingresar..." enabled)                                               
+                                                        div(class="form-group")
+                                                            label Contacto
+                                                            input(type="text" class="form-control" placeholder="Ingresar..." enabled)
+                                                        div(class="form-group")
+                                                            label Tfno:
+                                                            div(class="input-group")
+                                                                div(class="input-group-prepend")
+                                                                    span(class="input-group-text") <i class="fas fa-phone"></i>                                                            
+                                                                input(type="text" class="form-control" data-inputmask="'mask': ['999-999-9999 [x99999]', '+099 99 99 9999[9]-9999']" data-mask)
+                                                        div(class="form-group")
+                                                            label(for="exampleInputEmail1") Email
+                                                            input(type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email")                                                                
+                                                    //.card-body
+                                                    div(class="card-footer")
+                                                        button(type="submit" class="btn btn-primary") Enviar
+                                                //.card
+                                //.tab-pane
+                                div(class="tab-pane" id="tab_2") Datos pedido
+                                    div(class="row")
+                                        // left column 
+                                        div(class="col-md-6")
+                                            // general form elements
+                                            div(class="card card-primary")
+                                                div(class="card-header")
+                                                    h3(class="card-title") Datos Pedido
+                                                //.card-header 
+                                                // form start 
+                                                form                                                    
+                                                    div(class="card-body")
+                                                        div(class="form-group")
+                                                            label Tipo de articulo
+                                                            input(type="text" class="form-control" placeholder="Ingresar..." enabled)
+                                                        div(class="form-group")
+                                                            label Color
+                                                            input(type="text" class="form-control" placeholder="Ingresar..." enabled)
+                                                        div(class="form-group")
+                                                            label Numero de pedido
+                                                            input(type="text" class="form-control" placeholder="Ingresar..." enabled)
+                                                        div(class="form-group")
+                                                            label Cantidad pares surtidos
+                                                            input(type="text" class="form-control" placeholder="Ingresar..." enabled)
+                                                        div(class="form-group")
+                                                            label Cantidad pares sin surtir
+                                                            input(type="text" class="form-control" placeholder="Ingresar..." enabled)
+                                                        div(class="form-group")
+                                                            label Cantidad pares totales
+                                                            input(type="text" class="form-control" placeholder="Ingresar..." disabled)
+                                                    //.card-body
+                                                    div(class="card-footer")
+                                                        button(type="submit" class="btn btn-primary") Enviar
+                                                //.card
+                                                        
+                                        // right column 
+                                        div(class="col-md-6")
+                                            // general form elements
+                                            div(class="card card-primary")
+                                                div(class="card-header")
+                                                    h3(class="card-title") Nivel de Inspeccion
+                                                //.card-header 
+                                                // form start 
+                                                form
+                                                    div(class="card-body")                                                        
+                                                        div(class="row")
+                                                            // left column 
+                                                            div(class="col-md-3")
+                                                                div(class="form-group")
+                                                                    label Batch Size
+                                                                    select(class="form-control select2" style="width: 100%;" disabled="disabled")
+                                                                        option(selected="selected") 0
+                                                                        option 2-8
+                                                                        option 9-15
+                                                                        option 16-25
+                                                                        option 26-50
+                                                                        option 51-90
+                                                                        option 91-150
+                                                                        option 151-280
+                                                                        option 281-500
+                                                                        option 501-1200
+                                                                        option 1201-3200
+                                                                        option 3201-10000
+                                                                        option 10001-35000
+                                                                        option 35001-150000
+                                                            // left center column 
+                                                            div(class="col-md-3")
+                                                                div(class="form-group")
+                                                                    label Sample Code
+                                                                    select(class="form-control select2" style="width: 100%;" disabled="disabled")
+                                                                        option(selected="selected") #
+                                                                        option A
+                                                                        option B
+                                                                        option C
+                                                                        option D
+                                                                        option E
+                                                                        option F
+                                                                        option G
+                                                                        option H                                                                        
+                                                                        option J
+                                                                        option K
+                                                                        option L
+                                                                        option M
+                                                                        option N
+                                                                        option P
+                                                                        option Q
+                                                                        option R
+                                                            // center left column 
+                                                            div(class="col-md-3")
+                                                                div(class="form-group")
+                                                                    label Sample Size
+                                                                    select(class="form-control select2" style="width: 100%;" disabled="disabled")
+                                                                        option(selected="selected") #
+                                                                        option 2
+                                                                        option 3
+                                                                        option 5
+                                                                        option 8
+                                                                        option 13
+                                                                        option 20
+                                                                        option 32
+                                                                        option 50
+                                                                        option 80
+                                                                        option 125
+                                                                        option 200
+                                                                        option 315
+                                                                        option 500
+                                                                        option 800
+                                                                        option 1250
+                                                                        option 2000      
+                                                            // center right column 
+                                                            div(class="col-md-3")
+                                                                div(class="form-group")
+                                                                        label G.I. Level
+                                                                        select(class="form-control select2" style="width: 100%;")
+                                                                            option(selected="selected") I
+                                                                            option II
+                                                                            option III                                                            
+                                                        div(class="row")
+                                                            // column 1 
+                                                            div(class="col-md-2")
+                                                                div(class="form-group")
+                                                                        label AQL - C
+                                                                        select(class="form-control select2" style="width: 100%;")
+                                                                            option(selected="selected") 0
+                                                                            option 1,0
+                                                                            option 1,5
+                                                                            option 2,5
+                                                                            option 4,0
+                                                                            option 6,5
+                                                                            option 10
+                                                                            option 15
+                                                                            option 25
+                                                            // column 2 
+                                                            div(class="col-md-2")
+                                                                div(class="form-group")
+                                                                    label Maximo C
+                                                                    input(type="text" class="form-control" placeholder="" disabled)
+                                                            // column 3 
+                                                            div(class="col-md-2")
+                                                                div(class="form-group")
+                                                                        label AQL - M
+                                                                        select(class="form-control select2" style="width: 100%;")
+                                                                            option(selected="selected") 0
+                                                                            option 1,0
+                                                                            option 1,5
+                                                                            option 2,5
+                                                                            option 4,0
+                                                                            option 6,5
+                                                                            option 10
+                                                                            option 15
+                                                                            option 25
+                                                            // column 4 
+                                                            div(class="col-md-2")
+                                                                div(class="form-group")
+                                                                    label Maximo M
+                                                                    input(type="text" class="form-control" placeholder="" disabled)
+                                                            // column 5 
+                                                            div(class="col-md-2")
+                                                                div(class="form-group")
+                                                                        label AQL - m
+                                                                        select(class="form-control select2" style="width: 100%;")
+                                                                            option(selected="selected") 0
+                                                                            option 1,0
+                                                                            option 1,5
+                                                                            option 2,5
+                                                                            option 4,0
+                                                                            option 6,5
+                                                                            option 10
+                                                                            option 15
+                                                                            option 25
+                                                            // column 6 
+                                                            div(class="col-md-2")
+                                                                div(class="form-group")
+                                                                    label Maximo m
+                                                                    input(type="text" class="form-control" placeholder="" disabled)
+                                                    //.card-body
+                                                    div(class="card-footer")
+                                                        button(type="submit" class="btn btn-primary") Enviar
+                                                //.card
+                                                        
+                                //.tab-pane
+                                div(class="tab-pane" id="tab_3") Realizacion Inspeccion 
+                                    div(class="row")
+                                        // left column 
+                                        div(class="col-md-6")
+                                            // general form elements
+                                            div(class="card card-primary")
+                                                div(class="card-header")
+                                                    h3(class="card-title") Proveedor
+                                                //.card-header 
+                                                // form start 
+                                                form
+                                                    div(class="card-body")
+                                                    //.card-body
+                                                    div(class="card-footer")
+                                                        button(type="submit" class="btn btn-primary") Enviar
+                                                //.card
+                                                        
+                                        // right column 
+                                        div(class="col-md-6")
+                                            // general form elements
+                                            div(class="card card-primary")
+                                                div(class="card-header")
+                                                    h3(class="card-title") Proveedor
+                                                //.card-header 
+                                                // form start 
+                                                form
+                                                    div(class="card-body")
+                                                    //.card-body
+                                                    div(class="card-footer")
+                                                        button(type="submit" class="btn btn-primary") Enviar
+                                                //.card
+                                //.tab-pane                                
+                                div(class="tab-pane" id="tab_4") Finalizar Inspeccion
+                                                        
+                                //.tab-pane
+                    //END CUSTOM TABS
+        //.content 
+
+    //.content-wrapper  
+

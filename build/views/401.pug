@@ -1,0 +1,20 @@
+doctype html
+html(lang='es')
+head
+    title 401
+    include layout/header.pug 
+body.hold-transition.error-page
+    section.content
+        .error-page
+            h2.headline.text-warning 401
+
+            .error-content                
+                h3
+                    <i class="fas fa-exclamation-triangle text-warning"></i>Oops! Pagina no encontrada.
+                    
+                p.text-danger Es necesario autenticar para obtener la pagina solicitada. <a href="/login">Inicio</a>. 
+                unless success_msg
+                    div(class="alert alert-warning alert-dismissible fade show" role="alert")
+                        strong=success_msg
+                        button(type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close")
+include layout/js.pug
